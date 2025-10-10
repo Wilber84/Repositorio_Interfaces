@@ -2,6 +2,8 @@
 Trabajos de diseño de interfaces.
 
 Grupo:
-Santiago Contreras 
-Wilber Loaiza 
-Santiago Peña
+Santiago Contreras.
+ 
+Wilber Loaiza.
+ 
+Santiago Peña.
