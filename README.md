@@ -1,5 +1,6 @@
 # Repositorio_Interfaces
-Trabajos de diseño de interfaces 
+Trabajos de diseño de interfaces.
+
 Grupo:
 Santiago Contreras 
 Wilber Loaiza 
