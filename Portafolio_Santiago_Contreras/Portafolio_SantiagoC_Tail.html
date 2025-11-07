@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Santiago Contreras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="font-[Poppins] text-white scroll-smooth bg-black relative overflow-hidden">
+    <!-- Canvas fondo galaxia -->
+    <canvas id="galaxyCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+    <!-- Navbar -->
+    <nav class="bg-black-900 fixed top-0 w-full z-50 shadow-lg">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#inicio" class="text-xl font-bold text-red-500">Santiago Contreras</a>
+
+        <button id="menu-btn" class="lg:hidden text-white text-2xl">☰</button>
+
+        <ul id="menu" class="hidden lg:flex space-x-6">
+          <li><a href="#inicio" class="nav-link hover:text-red-400" data-section="inicio">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link hover:text-red-400" data-section="sobre-mi">Sobre mí</a></li>
+          <li><a href="#interesante" class="nav-link hover:text-red-400" data-section="interesante">Interesante</a></li>
+        </ul>
+      </div>
+
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="lg:hidden hidden bg-gray-800">
+        <ul class="flex flex-col items-center py-3 space-y-2">
+          <li><a href="#inicio" class="nav-link hover:text-red-400" data-section="inicio">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link hover:text-red-400" data-section="sobre-mi">Sobre mí</a></li>
+          <li><a href="#interesante" class="nav-link hover:text-red-400" data-section="interesante">Interesante</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio" class="flex items-center min-h-screen pt-20 bg-gradient-radial from-[#5a0b0b] to-black section">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-8">
+        <div class="text-center md:text-left space-y-4 animate-fadeInUp">
+          <h1 class="text-4xl md:text-5xl font-bold">
+            ¡Hola, soy <span class="text-red-400">Santiago Contreras</span>!
+          </h1>
+          <p class="text-lg">Diseñador UI y Programador en desarrollo.</p>
+          <a
+            href="#sobre-mi"
+            data-section="sobre-mi"
+            class="nav-link inline-block border border-white text-white px-6 py-3 rounded-lg hover:bg-red-600 transition"
+          >
+            Sobre mí
+          </a>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="https://preview.redd.it/his-face-reminds-me-of-that-scared-hamster-meme-v0-691bghdqg9qf1.jpg?width=575&format=pjpg&auto=webp&s=fc2123234f9075b0043af84ffde5b2a405609a14"
+            alt="Foto de perfil"
+            class="w-64 h-64 mx-auto rounded-full border-4 border-red-900 shadow-lg object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="bg-gray-900 py-16 text-center hidden section">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6 text-red-400">Sobre mí</h2>
+        <p class="text-lg text-gray-300 mb-10">
+        Soy un estudiante de Ingeniería en Sistemas apasionado por el diseño y la tecnología.
+        Me encanta transformar ideas en interfaces modernas, visualmente atractivas y fáciles de usar.
+        Disfruto aprender nuevas herramientas y lenguajes que me permitan crear experiencias digitales únicas.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-3">🎓 Estudios</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• Ingeniería en Sistemas — INTEP</li>
+              <li>• Autodidacta en Frontend y herramientas no-code</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-3">📬 Contacto</h3>
+            <p>Email:
+              <a href="mailto:wdloaiza_usistemas@intep.edu.co" class="text-red-400 hover:underline">
+                scontreras_usistemas@intep.edu.co
+              </a>
+            </p>
+            <div class="flex gap-6 mt-4 text-3xl">
+              <a href="https://github.com/Wilber84" class="hover:text-red-400"><i class="bi bi-github"></i></a>
+              <a href="#" class="hover:text-red-400"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="hover:text-red-400"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESANTE -->
+    <section id="interesante" class="bg-gradient-to-b from-black to-gray-900 py-20 text-center hidden section">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-red-400 mb-6">Algo interesante 🤔</h2>
+        <p class="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+          Siempre me ha llamado la atención cómo la tecnología puede conectar a las personas y facilitar su vida diaria.
+          Me gusta experimentar con inteligencia artificial, animaciones web y proyectos que mezclen diseño y programación.
+          Creo firmemente que la creatividad y la curiosidad son las claves para seguir creciendo en el mundo digital.
+          Cada pequeño proyecto es una oportunidad para aprender algo nuevo y explorar nuevas formas de innovar.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-10">
+          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+            <i class="bi bi-stars text-4xl text-red-400"></i>
+            <h3 class="text-xl font-semibold mt-3">Diseño & Creatividad</h3>
+            <p class="text-gray-400 mt-2">Transformo ideas en interfaces visualmente atractivas.</p>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+            <i class="bi bi-cpu text-4xl text-red-400"></i>
+            <h3 class="text-xl font-semibold mt-3">Tecnología</h3>
+            <p class="text-gray-400 mt-2">Combino lógica, estética y usabilidad en cada proyecto.</p>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+            <i class="bi bi-rocket text-4xl text-red-400"></i>
+            <h3 class="text-xl font-semibold mt-3">Exploración</h3>
+            <p class="text-gray-400 mt-2">Siempre aprendiendo algo nuevo en diseño, IA o código.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-center py-4 text-gray-300">
+      <p>&copy; 2025 Santiago Contreras. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Script: menú + control de secciones -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+      const links = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll(".section");
+
+      links.forEach(link => {
+        link.addEventListener("click", e => {
+          const target = e.target.dataset.section;
+          sections.forEach(sec => {
+            sec.classList.toggle("hidden", sec.id !== target && target !== "inicio");
+          });
+          menu.classList.add("hidden");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+
+    <!-- Fondo galaxia animado -->
+    <script>
+      const canvas = document.getElementById("galaxyCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let width, height, stars;
+      function init() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        stars = Array.from({ length: 120 }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 2,
+          dx: (Math.random() - 0.5) * 0.3,
+          dy: (Math.random() - 0.5) * 0.3,
+          opacity: Math.random(),
+          delta: Math.random() * 0.02,
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        const gradient = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width / 1.5);
+        gradient.addColorStop(0, "#5a0b0b");
+        gradient.addColorStop(1, "#000");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        stars.forEach((s) => {
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(255,255,255,${s.opacity})`;
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fill();
+
+          s.x += s.dx;
+          s.y += s.dy;
+          s.opacity += s.delta;
+
+          if (s.opacity <= 0 || s.opacity >= 1) s.delta *= -1;
+          if (s.x < 0 || s.x > width) s.dx *= -1;
+          if (s.y < 0 || s.y > height) s.dy *= -1;
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener("resize", init);
+      init();
+      draw();
+    </script>
+
+    <!-- Estilos -->
+    <style>
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeInUp { animation: fadeInUp 1s ease forwards; }
+      .bg-gradient-radial { background: radial-gradient(circle at 20% 20%, #5a0b0b, #000); }
+    </style>
+  </body>
+</html>
